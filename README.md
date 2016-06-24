@@ -1,1 +1,1 @@
-# my-vim-configuration
+# My Personal Configurations
