@@ -18,18 +18,20 @@ Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'vim-scripts/TaskList.vim'
 Plugin 'Lokaltog/vim-easymotion'
-Plugin 'pangloss/vim-javascript'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'Raimondi/delimitMate'
 Plugin 'nanotech/jellybeans.vim'
 Plugin 'godlygeek/tabular'
+
 Plugin 'leafgarland/typescript-vim'
 Plugin 'pangloss/vim-javascript'
+Plugin 'airblade/vim-gitgutter'
 
 Plugin 'haya14busa/incsearch.vim'
 Plugin 'haya14busa/incsearch-fuzzy.vim'
 
 Plugin 'tpope/vim-dispatch'
+
 
 call vundle#end()            " required
 filetype plugin indent on
