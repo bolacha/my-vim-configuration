@@ -24,6 +24,7 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'nanotech/jellybeans.vim'
 Plugin 'godlygeek/tabular'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'pangloss/vim-javascript'
 
 Plugin 'haya14busa/incsearch.vim'
 Plugin 'haya14busa/incsearch-fuzzy.vim'
@@ -50,23 +51,23 @@ set number
 set title
 set backspace=2
 set background=dark
-set tabstop=4       " Espaços por tab
-set shiftwidth=4    " Espaços para cada passo de indent
+set tabstop=4		" Espaços por tab
+set shiftwidth=4	" Espaços para cada passo de indent
 set textwidth=120
-set expandtab       " Substitui tab por espaços adequados
-                    " Use CTRL-V <Tab> para colocar Tabs reais
-"set smarttab       " usa shiftwidth no início, tabstop no meio
-                    " <BS> apaga shiftwidth no início
+set expandtab		" Substitui tab por espaços adequados
+        			" Use CTRL-V <Tab> para colocar Tabs reais
+"set smarttab		" usa shiftwidth no início, tabstop no meio
+	        		" <BS> apaga shiftwidth no início
 set hlsearch
 set incsearch
 set ignorecase
 set smartcase
-set showcmd         " mostra comando parcial
+set showcmd	    	" mostra comando parcial
 set showmatch
 set nomodeline
 set t_Co=256
 
-set ofu=syntaxcomplete#Complete "omnicompletion
+set ofu=syntaxcomplete#Complete	"omnicompletion
 
 set ffs=unix,dos
 
@@ -109,6 +110,9 @@ augroup vimrc_autocmds
     autocmd FileType python highlight Excess ctermbg=DarkGrey guibg=Black
     autocmd FileType python match Excess /\%120v.*/
     autocmd FileType python set nowrap
+
+
+    autocmd FileType typescript :set makeprg=tsc
 augroup END
 
 " Airline setup
@@ -193,7 +197,6 @@ endfunction
 
 noremap <silent><expr> <Space>/ incsearch#go(<SID>config_easyfuzzymotion())
 
-autocmd FileType typescript :set makeprg=tsc
 "  Error of TSC File
 autocmd QuickFixCmdPost [^l]* nested cwindow
 autocmd QuickFixCmdPost    l* nested lwindow
